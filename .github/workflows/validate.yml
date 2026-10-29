@@ -1,0 +1,27 @@
+name: RoundAndRound CPU memory gates
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install NumPy
+        run: python -m pip install -r requirements.txt
+      - name: Run all unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Run original reactivation gate
+        run: python benchmark.py
+      - name: Run eight-seed consolidation gate
+        run: python consolidation_benchmark.py --output results/consolidation_v1.json
+      - name: Upload full seedwise result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: roundandround-consolidation-seedwise
+          path: results/consolidation_v1.json
+          if-no-files-found: warn
