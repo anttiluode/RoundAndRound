@@ -21,6 +21,19 @@ jobs:
       - name: Run Gate 3 learned structural-memory confirmation
         run: python structural_benchmark.py --seeds 501,502,503,504,505,506,507,508 --output results/structural_confirm.json
 
+      - name: Run Gate 4 active re-entry independent confirmation
+        run: python active_reentry_benchmark.py --confirm --output results/active_reentry_confirm.json
+      - name: Run post-Gate-4 mixture follow-up independent split
+        run: python mixture_followup.py --confirm --output results/mixture_confirm.json
+      - name: Upload Gate 4 receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: roundandround-gate4-and-mixture-independent
+          path: |
+            results/active_reentry_confirm.json
+            results/mixture_confirm.json
+          if-no-files-found: warn
       - name: Upload Gate 3 independent confirmation receipts
         if: always()
         uses: actions/upload-artifact@v4
