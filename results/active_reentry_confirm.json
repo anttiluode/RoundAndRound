@@ -1,0 +1,610 @@
+{
+  "protocol": {
+    "dim": 8,
+    "slots": 3,
+    "context_dim": 8,
+    "trace_starts": 12,
+    "trace_steps": 3,
+    "episodes_per_task": 24,
+    "observation_noise": 0.0015,
+    "cue_noise": 0.2,
+    "sensor_noise": 0.045,
+    "split_threshold": 0.075,
+    "learning_rate": 0.45,
+    "probe_budget": 2,
+    "seeds": [
+      701,
+      702,
+      703,
+      704,
+      705,
+      706,
+      707,
+      708
+    ]
+  },
+  "queries_per_task": 120,
+  "summary": {
+    "cue_only": {
+      "accuracy_mean": 0.3333333333333333,
+      "accuracy_sd": 0.0,
+      "response_gain_mean": -0.5791453253457868,
+      "accuracy_by_seed": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "gain_by_seed": [
+        -1.1766154500576667,
+        -0.4971412279717444,
+        -0.32911689662443977,
+        -0.2133068313783573,
+        -0.4145371714676392,
+        -0.7646545937460962,
+        -1.0277420052104467,
+        -0.2100484263099044
+      ],
+      "scalars_per_query": 0.0
+    },
+    "basis": {
+      "accuracy_mean": 0.53125,
+      "accuracy_sd": 0.11034208072871132,
+      "response_gain_mean": 6.574151567788344e-06,
+      "accuracy_by_seed": [
+        0.5472222222222223,
+        0.5,
+        0.4583333333333333,
+        0.5111111111111111,
+        0.6388888888888888,
+        0.36666666666666664,
+        0.5,
+        0.7277777777777777
+      ],
+      "gain_by_seed": [
+        -0.061274848938037446,
+        0.06242222356767314,
+        -0.264446826604412,
+        -0.08096456799621213,
+        0.20089812063202217,
+        -0.2555149755675441,
+        -0.06275231443447907,
+        0.4616857825535317
+      ],
+      "scalars_per_query": 2.0
+    },
+    "random": {
+      "accuracy_mean": 0.5461805555555556,
+      "accuracy_sd": 0.07646190593991709,
+      "response_gain_mean": 0.004710129800105524,
+      "accuracy_by_seed": [
+        0.675,
+        0.5,
+        0.44722222222222224,
+        0.48333333333333334,
+        0.6027777777777777,
+        0.5,
+        0.5611111111111111,
+        0.6
+      ],
+      "gain_by_seed": [
+        0.19063913454083764,
+        -0.025094913335643794,
+        -0.309886422694607,
+        -0.16633340271491673,
+        0.151312651373664,
+        -0.055916025714987674,
+        0.02309465885878941,
+        0.22986535808770828
+      ],
+      "scalars_per_query": 2.0
+    },
+    "fixed": {
+      "accuracy_mean": 0.7225694444444445,
+      "accuracy_sd": 0.12339299911680793,
+      "response_gain_mean": 0.4026219292047445,
+      "accuracy_by_seed": [
+        0.8833333333333333,
+        0.6722222222222223,
+        0.5527777777777778,
+        0.625,
+        0.7361111111111112,
+        0.625,
+        0.8194444444444444,
+        0.8666666666666667
+      ],
+      "gain_by_seed": [
+        0.755472325918575,
+        0.2965888047273765,
+        -0.05127546476566367,
+        0.20761381418055416,
+        0.4548312374016299,
+        0.17798051300918452,
+        0.5991372240738438,
+        0.7806269790924563
+      ],
+      "scalars_per_query": 2.0
+    },
+    "adaptive": {
+      "accuracy_mean": 0.7729166666666667,
+      "accuracy_sd": 0.13985182067471183,
+      "response_gain_mean": 0.5025325288769563,
+      "accuracy_by_seed": [
+        0.8972222222222223,
+        0.7666666666666667,
+        0.575,
+        0.6388888888888888,
+        0.8888888888888888,
+        0.6305555555555555,
+        0.8638888888888889,
+        0.9222222222222223
+      ],
+      "gain_by_seed": [
+        0.7827659384497628,
+        0.4774683488130749,
+        0.014727161814523883,
+        0.21597543071885825,
+        0.7646977487529799,
+        0.1949318549584343,
+        0.6953778560327185,
+        0.8743158914752978
+      ],
+      "scalars_per_query": 2.0
+    }
+  },
+  "oracle_gain_mean": 0.9997020482886829,
+  "learn_route_accuracy_mean": 1.0,
+  "feedback_scramble_accuracy_mean": 0.115625,
+  "reconsolidation": {
+    "original_gain_on_changed_A": 0.9916779359490107,
+    "read_only_after": 0.9916779359490107,
+    "external_plastic_after": 0.9677609158770546,
+    "self_replay_after": 0.9916779359490107,
+    "A_correct_query_fraction": 0.70625,
+    "external_updates": 186.0,
+    "self_replay_rejections": 600.0,
+    "other_slot_drift": 0.002335354158088503
+  },
+  "gate": {
+    "auto_discovered_distinct_operators": true,
+    "matched_direct_learning_ties": true,
+    "active_beats_random_by_0_10": true,
+    "active_beats_best_fixed_by_0_05": true,
+    "reactivation_gain_above_0_80": false,
+    "external_reconsolidation_improves": false,
+    "internal_replay_does_not_write": true,
+    "all_advantage_gates": false
+  },
+  "seedwise": [
+    {
+      "seed": 701,
+      "learn_route_accuracy": 1.0,
+      "slots": 3,
+      "memory_scalars": 219,
+      "operator_rmse": 0.005481999261831149,
+      "max_matched_direct_weight_difference": 5.551115123125783e-17,
+      "retrieval": {
+        "cue_only": {
+          "accuracy": 0.3333333333333333,
+          "response_gain": -1.1766154500576667,
+          "observed_scalars": 0,
+          "observations_per_query": 0.0
+        },
+        "basis": {
+          "accuracy": 0.5472222222222223,
+          "response_gain": -0.061274848938037446,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "random": {
+          "accuracy": 0.675,
+          "response_gain": 0.19063913454083764,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "fixed": {
+          "accuracy": 0.8833333333333333,
+          "response_gain": 0.755472325918575,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "adaptive": {
+          "accuracy": 0.8972222222222223,
+          "response_gain": 0.7827659384497628,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        }
+      },
+      "oracle_indexed_response_gain": 0.9997103738284202,
+      "mismatched_world_feedback_accuracy": 0.05277777777777778
+    },
+    {
+      "seed": 702,
+      "learn_route_accuracy": 1.0,
+      "slots": 3,
+      "memory_scalars": 219,
+      "operator_rmse": 0.004808420404507528,
+      "max_matched_direct_weight_difference": 2.7755575615628914e-17,
+      "retrieval": {
+        "cue_only": {
+          "accuracy": 0.3333333333333333,
+          "response_gain": -0.4971412279717444,
+          "observed_scalars": 0,
+          "observations_per_query": 0.0
+        },
+        "basis": {
+          "accuracy": 0.5,
+          "response_gain": 0.06242222356767314,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "random": {
+          "accuracy": 0.5,
+          "response_gain": -0.025094913335643794,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "fixed": {
+          "accuracy": 0.6722222222222223,
+          "response_gain": 0.2965888047273765,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "adaptive": {
+          "accuracy": 0.7666666666666667,
+          "response_gain": 0.4774683488130749,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        }
+      },
+      "oracle_indexed_response_gain": 0.9997477631589976,
+      "mismatched_world_feedback_accuracy": 0.09444444444444444
+    },
+    {
+      "seed": 703,
+      "learn_route_accuracy": 1.0,
+      "slots": 3,
+      "memory_scalars": 219,
+      "operator_rmse": 0.005506336791660023,
+      "max_matched_direct_weight_difference": 2.7755575615628914e-17,
+      "retrieval": {
+        "cue_only": {
+          "accuracy": 0.3333333333333333,
+          "response_gain": -0.32911689662443977,
+          "observed_scalars": 0,
+          "observations_per_query": 0.0
+        },
+        "basis": {
+          "accuracy": 0.4583333333333333,
+          "response_gain": -0.264446826604412,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "random": {
+          "accuracy": 0.44722222222222224,
+          "response_gain": -0.309886422694607,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "fixed": {
+          "accuracy": 0.5527777777777778,
+          "response_gain": -0.05127546476566367,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "adaptive": {
+          "accuracy": 0.575,
+          "response_gain": 0.014727161814523883,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        }
+      },
+      "oracle_indexed_response_gain": 0.9996734878350321,
+      "mismatched_world_feedback_accuracy": 0.25
+    },
+    {
+      "seed": 704,
+      "learn_route_accuracy": 1.0,
+      "slots": 3,
+      "memory_scalars": 219,
+      "operator_rmse": 0.005477039247714213,
+      "max_matched_direct_weight_difference": 2.7755575615628914e-17,
+      "retrieval": {
+        "cue_only": {
+          "accuracy": 0.3333333333333333,
+          "response_gain": -0.2133068313783573,
+          "observed_scalars": 0,
+          "observations_per_query": 0.0
+        },
+        "basis": {
+          "accuracy": 0.5111111111111111,
+          "response_gain": -0.08096456799621213,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "random": {
+          "accuracy": 0.48333333333333334,
+          "response_gain": -0.16633340271491673,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "fixed": {
+          "accuracy": 0.625,
+          "response_gain": 0.20761381418055416,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "adaptive": {
+          "accuracy": 0.6388888888888888,
+          "response_gain": 0.21597543071885825,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        }
+      },
+      "oracle_indexed_response_gain": 0.9996446354221228,
+      "mismatched_world_feedback_accuracy": 0.18333333333333332
+    },
+    {
+      "seed": 705,
+      "learn_route_accuracy": 1.0,
+      "slots": 3,
+      "memory_scalars": 219,
+      "operator_rmse": 0.005148975673043637,
+      "max_matched_direct_weight_difference": 2.7755575615628914e-17,
+      "retrieval": {
+        "cue_only": {
+          "accuracy": 0.3333333333333333,
+          "response_gain": -0.4145371714676392,
+          "observed_scalars": 0,
+          "observations_per_query": 0.0
+        },
+        "basis": {
+          "accuracy": 0.6388888888888888,
+          "response_gain": 0.20089812063202217,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "random": {
+          "accuracy": 0.6027777777777777,
+          "response_gain": 0.151312651373664,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "fixed": {
+          "accuracy": 0.7361111111111112,
+          "response_gain": 0.4548312374016299,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "adaptive": {
+          "accuracy": 0.8888888888888888,
+          "response_gain": 0.7646977487529799,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        }
+      },
+      "oracle_indexed_response_gain": 0.9997055221572927,
+      "mismatched_world_feedback_accuracy": 0.06666666666666667
+    },
+    {
+      "seed": 706,
+      "learn_route_accuracy": 1.0,
+      "slots": 3,
+      "memory_scalars": 219,
+      "operator_rmse": 0.00445334329668357,
+      "max_matched_direct_weight_difference": 3.122502256758253e-17,
+      "retrieval": {
+        "cue_only": {
+          "accuracy": 0.3333333333333333,
+          "response_gain": -0.7646545937460962,
+          "observed_scalars": 0,
+          "observations_per_query": 0.0
+        },
+        "basis": {
+          "accuracy": 0.36666666666666664,
+          "response_gain": -0.2555149755675441,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "random": {
+          "accuracy": 0.5,
+          "response_gain": -0.055916025714987674,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "fixed": {
+          "accuracy": 0.625,
+          "response_gain": 0.17798051300918452,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "adaptive": {
+          "accuracy": 0.6305555555555555,
+          "response_gain": 0.1949318549584343,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        }
+      },
+      "oracle_indexed_response_gain": 0.9997156820552515,
+      "mismatched_world_feedback_accuracy": 0.18055555555555555
+    },
+    {
+      "seed": 707,
+      "learn_route_accuracy": 1.0,
+      "slots": 3,
+      "memory_scalars": 219,
+      "operator_rmse": 0.004973673287885241,
+      "max_matched_direct_weight_difference": 2.7755575615628914e-17,
+      "retrieval": {
+        "cue_only": {
+          "accuracy": 0.3333333333333333,
+          "response_gain": -1.0277420052104467,
+          "observed_scalars": 0,
+          "observations_per_query": 0.0
+        },
+        "basis": {
+          "accuracy": 0.5,
+          "response_gain": -0.06275231443447907,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "random": {
+          "accuracy": 0.5611111111111111,
+          "response_gain": 0.02309465885878941,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "fixed": {
+          "accuracy": 0.8194444444444444,
+          "response_gain": 0.5991372240738438,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "adaptive": {
+          "accuracy": 0.8638888888888889,
+          "response_gain": 0.6953778560327185,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        }
+      },
+      "oracle_indexed_response_gain": 0.9996874155430243,
+      "mismatched_world_feedback_accuracy": 0.07777777777777778
+    },
+    {
+      "seed": 708,
+      "learn_route_accuracy": 1.0,
+      "slots": 3,
+      "memory_scalars": 219,
+      "operator_rmse": 0.005164388761736023,
+      "max_matched_direct_weight_difference": 2.7755575615628914e-17,
+      "retrieval": {
+        "cue_only": {
+          "accuracy": 0.3333333333333333,
+          "response_gain": -0.2100484263099044,
+          "observed_scalars": 0,
+          "observations_per_query": 0.0
+        },
+        "basis": {
+          "accuracy": 0.7277777777777777,
+          "response_gain": 0.4616857825535317,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "random": {
+          "accuracy": 0.6,
+          "response_gain": 0.22986535808770828,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "fixed": {
+          "accuracy": 0.8666666666666667,
+          "response_gain": 0.7806269790924563,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        },
+        "adaptive": {
+          "accuracy": 0.9222222222222223,
+          "response_gain": 0.8743158914752978,
+          "observed_scalars": 720,
+          "observations_per_query": 2.0
+        }
+      },
+      "oracle_indexed_response_gain": 0.9997315063093223,
+      "mismatched_world_feedback_accuracy": 0.019444444444444445
+    }
+  ],
+  "drift_seedwise": [
+    {
+      "seed": 701,
+      "original_gain_on_changed_A": 0.9924698389820052,
+      "A_correct_query_fraction": 1.0,
+      "read_only_after": 0.9924698389820052,
+      "external_plastic_after": 0.9927230742100774,
+      "self_replay_after": 0.9924698389820052,
+      "external_updates": 588,
+      "self_replay_rejections": 600,
+      "other_slot_drift": 0.0
+    },
+    {
+      "seed": 702,
+      "original_gain_on_changed_A": 0.9914459405078456,
+      "A_correct_query_fraction": 0.6433333333333333,
+      "read_only_after": 0.9914459405078456,
+      "external_plastic_after": 0.9669545748564377,
+      "self_replay_after": 0.9914459405078456,
+      "external_updates": 88,
+      "self_replay_rejections": 600,
+      "other_slot_drift": 0.0033919306917010034
+    },
+    {
+      "seed": 703,
+      "original_gain_on_changed_A": 0.9908025834582288,
+      "A_correct_query_fraction": 0.6566666666666666,
+      "read_only_after": 0.9908025834582288,
+      "external_plastic_after": 0.9616381621771736,
+      "self_replay_after": 0.9908025834582288,
+      "external_updates": 127,
+      "self_replay_rejections": 600,
+      "other_slot_drift": 0.0
+    },
+    {
+      "seed": 704,
+      "original_gain_on_changed_A": 0.9890695506893248,
+      "A_correct_query_fraction": 0.52,
+      "read_only_after": 0.9890695506893248,
+      "external_plastic_after": 0.9089250343437829,
+      "self_replay_after": 0.9890695506893248,
+      "external_updates": 77,
+      "self_replay_rejections": 600,
+      "other_slot_drift": 0.00148063642151193
+    },
+    {
+      "seed": 705,
+      "original_gain_on_changed_A": 0.9915769275584024,
+      "A_correct_query_fraction": 0.7766666666666666,
+      "read_only_after": 0.9915769275584024,
+      "external_plastic_after": 0.9777487521012691,
+      "self_replay_after": 0.9915769275584024,
+      "external_updates": 228,
+      "self_replay_rejections": 600,
+      "other_slot_drift": 0.00041493555953918057
+    },
+    {
+      "seed": 706,
+      "original_gain_on_changed_A": 0.9937842693526066,
+      "A_correct_query_fraction": 0.5133333333333333,
+      "read_only_after": 0.9937842693526066,
+      "external_plastic_after": 0.9937842693526066,
+      "self_replay_after": 0.9937842693526066,
+      "external_updates": 4,
+      "self_replay_rejections": 600,
+      "other_slot_drift": 0.0005148366937851936
+    },
+    {
+      "seed": 707,
+      "original_gain_on_changed_A": 0.9929946294170711,
+      "A_correct_query_fraction": 0.6333333333333333,
+      "read_only_after": 0.9929946294170711,
+      "external_plastic_after": 0.9611712124709721,
+      "self_replay_after": 0.9929946294170711,
+      "external_updates": 176,
+      "self_replay_rejections": 600,
+      "other_slot_drift": 0.008693815824584464
+    },
+    {
+      "seed": 708,
+      "original_gain_on_changed_A": 0.991279747626601,
+      "A_correct_query_fraction": 0.9066666666666666,
+      "read_only_after": 0.991279747626601,
+      "external_plastic_after": 0.9791422475041176,
+      "self_replay_after": 0.991279747626601,
+      "external_updates": 200,
+      "self_replay_rejections": 600,
+      "other_slot_drift": 0.004186678073586254
+    }
+  ]
+}

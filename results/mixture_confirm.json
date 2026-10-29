@@ -1,0 +1,140 @@
+{
+  "status": "post-Gate4 mixture follow-up; 801\u2013808 are independent of mixture development, but the hypothesis was generated after Gate4",
+  "protocol": {
+    "dim": 8,
+    "slots": 3,
+    "context_dim": 8,
+    "trace_starts": 12,
+    "trace_steps": 3,
+    "episodes_per_task": 24,
+    "observation_noise": 0.0015,
+    "cue_noise": 0.2,
+    "sensor_noise": 0.045,
+    "split_threshold": 0.075,
+    "learning_rate": 0.45,
+    "probe_budget": 2,
+    "seeds": [
+      801,
+      802,
+      803,
+      804,
+      805,
+      806,
+      807,
+      808
+    ]
+  },
+  "means": {
+    "prior_mixture": 0.28847690996179753,
+    "hard_adaptive": 0.7059321591837092,
+    "soft_adaptive": 0.8044805795262963,
+    "hard_fixed": 0.520723364613541,
+    "soft_fixed": 0.7124357765800242,
+    "abstain_adaptive": 0.6376678429401564
+  },
+  "effects": {
+    "soft_minus_hard_adaptive": 0.09854842034258704,
+    "soft_minus_hard_fixed": 0.19171241196648325,
+    "soft_adaptive_minus_soft_fixed": 0.09204480294627204,
+    "soft_adaptive_minus_prior": 0.5160036695644987
+  },
+  "abstain_rate_mean": 0.3364583333333333,
+  "seedwise": [
+    {
+      "seed": 801,
+      "mean_gain": {
+        "prior_mixture": 0.32788127275776097,
+        "hard_adaptive": 0.8658035651017356,
+        "soft_adaptive": 0.8880757647092561,
+        "hard_fixed": 0.7317487860448619,
+        "soft_fixed": 0.7955607221551806,
+        "abstain_adaptive": 0.7850980577432853
+      },
+      "abstain_fraction": 0.1527777777777778
+    },
+    {
+      "seed": 802,
+      "mean_gain": {
+        "prior_mixture": 0.2776164544903205,
+        "hard_adaptive": 0.7432180582302591,
+        "soft_adaptive": 0.813536519041443,
+        "hard_fixed": 0.42068424949351324,
+        "soft_fixed": 0.6397526001754554,
+        "abstain_adaptive": 0.6198807652186064
+      },
+      "abstain_fraction": 0.3638888888888889
+    },
+    {
+      "seed": 803,
+      "mean_gain": {
+        "prior_mixture": 0.331439586834588,
+        "hard_adaptive": 0.9541751258350284,
+        "soft_adaptive": 0.9617241537232101,
+        "hard_fixed": 0.8977280307830108,
+        "soft_fixed": 0.9222189757095064,
+        "abstain_adaptive": 0.9211811982175704
+      },
+      "abstain_fraction": 0.05277777777777778
+    },
+    {
+      "seed": 804,
+      "mean_gain": {
+        "prior_mixture": 0.28945749005655386,
+        "hard_adaptive": 0.5131721032880671,
+        "soft_adaptive": 0.678749951472911,
+        "hard_fixed": 0.4008455911929752,
+        "soft_fixed": 0.6500314468356236,
+        "abstain_adaptive": 0.3132898798038339
+      },
+      "abstain_fraction": 0.6694444444444444
+    },
+    {
+      "seed": 805,
+      "mean_gain": {
+        "prior_mixture": 0.34253460319589013,
+        "hard_adaptive": 0.9928683156606335,
+        "soft_adaptive": 0.9882478355433701,
+        "hard_fixed": 0.9121074759634256,
+        "soft_fixed": 0.9468948326737114,
+        "abstain_adaptive": 0.9734294829894662
+      },
+      "abstain_fraction": 0.019444444444444445
+    },
+    {
+      "seed": 806,
+      "mean_gain": {
+        "prior_mixture": 0.283966045418585,
+        "hard_adaptive": 0.7039480418037044,
+        "soft_adaptive": 0.7991039347541143,
+        "hard_fixed": 0.2352033527849998,
+        "soft_fixed": 0.6012017552204172,
+        "abstain_adaptive": 0.6710850389450468
+      },
+      "abstain_fraction": 0.29444444444444445
+    },
+    {
+      "seed": 807,
+      "mean_gain": {
+        "prior_mixture": 0.19127011766479868,
+        "hard_adaptive": 0.19223502110781496,
+        "soft_adaptive": 0.5253348978336853,
+        "hard_fixed": 0.13651990663055388,
+        "soft_fixed": 0.4948592543199308,
+        "abstain_adaptive": 0.2780327529133237
+      },
+      "abstain_fraction": 0.7027777777777777
+    },
+    {
+      "seed": 808,
+      "mean_gain": {
+        "prior_mixture": 0.2636497092758833,
+        "hard_adaptive": 0.682037042442431,
+        "soft_adaptive": 0.7810715791323802,
+        "hard_fixed": 0.43094952401498676,
+        "soft_fixed": 0.6489666255503688,
+        "abstain_adaptive": 0.5393455676901188
+      },
+      "abstain_fraction": 0.4361111111111111
+    }
+  ]
+}
