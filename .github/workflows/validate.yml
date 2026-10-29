@@ -48,3 +48,13 @@ jobs:
           name: roundandround-consolidation-seedwise
           path: results/consolidation_v1.json
           if-no-files-found: warn
+
+      - name: Run Gate 5 Changing Lens replication
+        run: python changing_lens_benchmark.py --confirm --output results/changing_lens_confirm.json
+      - name: Upload Gate 5 full replication
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: roundandround-changing-lens-gate5
+          path: results/changing_lens_confirm.json
+          if-no-files-found: warn
