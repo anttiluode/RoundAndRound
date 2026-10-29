@@ -1,0 +1,707 @@
+{
+  "status": "Gate5 exploratory; training costs differ by construction; no self/personality claim",
+  "unseen_world_policy_transfer_exploratory": {
+    "discover_unseen_world": {
+      "mean_probes": 3.0,
+      "accuracy": 0.4832142857142857,
+      "relative_recall_gain": 0.35776546923476565
+    },
+    "economical_unseen_world": {
+      "mean_probes": 0.0,
+      "accuracy": 0.34428571428571425,
+      "relative_recall_gain": 0.28386054943702776
+    }
+  },
+  "seed_list": [
+    901,
+    902,
+    903,
+    904,
+    905,
+    906,
+    907,
+    908
+  ],
+  "protocol": {
+    "dim": 8,
+    "channels": 6,
+    "probe_budget": 3,
+    "noise": 0.1,
+    "rho": 0.13,
+    "train_trials": 2600,
+    "test_trials": 350,
+    "seed": 19
+  },
+  "n_worlds": 8,
+  "summary": {
+    "discover": {
+      "mean_probes": 3.0,
+      "accuracy": 0.5135714285714286,
+      "log_score": -0.9635186194047829,
+      "relative_recall_gain": 0.406197012655669,
+      "graze_strength": 0.007318559728768506
+    },
+    "economical": {
+      "mean_probes": 0.0,
+      "accuracy": 0.34428571428571425,
+      "log_score": -1.0986122886681096,
+      "relative_recall_gain": 0.30262526197518297,
+      "graze_strength": 0.006557012132406521
+    },
+    "best_discrete": {
+      "mean_probes": 3.0,
+      "accuracy": 0.5321428571428571,
+      "log_score": -0.9336422083731064,
+      "relative_recall_gain": 0.4302043897654663,
+      "graze_strength": 0.007461156619675895
+    },
+    "first_discrete": {
+      "mean_probes": 3.0,
+      "accuracy": 0.4832142857142857,
+      "log_score": -1.0055737995140976,
+      "relative_recall_gain": 0.37622874020317826,
+      "graze_strength": 0.007171687190674146
+    },
+    "cue_only": {
+      "mean_probes": 0.0,
+      "accuracy": 0.34428571428571425,
+      "log_score": -1.0986122886681096,
+      "relative_recall_gain": 0.30262526197518297,
+      "graze_strength": 0.006557012132406521
+    }
+  },
+  "memory_swap_relative_gains": {
+    "discover_foreign_memory": -0.3685685047790818,
+    "economical_foreign_memory": -0.30243252623030303
+  },
+  "policy_swap_exact_probe_count": true,
+  "mean_style_gap": 3.0,
+  "style_gap_positive_seeds": 8,
+  "learned_vs_best_accuracy_delta": -0.018571428571428572,
+  "seedwise": [
+    {
+      "seed": 901,
+      "retrieval": {
+        "discover": {
+          "mean_probes": 3.0,
+          "accuracy": 0.48,
+          "log_score": -0.983672470514382,
+          "relative_recall_gain": 0.41098679407996674,
+          "graze_strength": 0.0076042137098985664,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "economical": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3514285714285714,
+          "log_score": -1.0986122886681096,
+          "relative_recall_gain": 0.34470788680872866,
+          "graze_strength": 0.0071210095339020296,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "best_discrete": {
+          "mean_probes": 3.0,
+          "accuracy": 0.5057142857142857,
+          "log_score": -0.9539995390793587,
+          "relative_recall_gain": 0.44083001347388917,
+          "graze_strength": 0.007791178097900748,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "first_discrete": {
+          "mean_probes": 3.0,
+          "accuracy": 0.4828571428571429,
+          "log_score": -1.012358316955017,
+          "relative_recall_gain": 0.40912498066192493,
+          "graze_strength": 0.007574151629928465,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "cue_only": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3514285714285714,
+          "log_score": -1.0986122886681096,
+          "relative_recall_gain": 0.34470788680872866,
+          "graze_strength": 0.0071210095339020296,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        }
+      },
+      "style_gap": 3.0,
+      "memory_swap": {
+        "discover_foreign_memory": {
+          "mean_probes": 3.0,
+          "accuracy": 0.32857142857142857,
+          "relative_recall_gain": -0.2932150214371947
+        },
+        "economical_foreign_memory": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3514285714285714,
+          "relative_recall_gain": -0.2688555261860941
+        }
+      },
+      "policy_swap": {
+        "host_A_with_B_policy": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3514285714285714
+        },
+        "host_B_with_A_policy": {
+          "mean_probes": 3.0,
+          "accuracy": 0.48
+        }
+      }
+    },
+    {
+      "seed": 902,
+      "retrieval": {
+        "discover": {
+          "mean_probes": 3.0,
+          "accuracy": 0.5514285714285714,
+          "log_score": -0.9606267957510217,
+          "relative_recall_gain": 0.3832429526097276,
+          "graze_strength": 0.006451073147526432,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "economical": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3628571428571429,
+          "log_score": -1.0986122886681096,
+          "relative_recall_gain": 0.29283920989871304,
+          "graze_strength": 0.005841190708580935,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "best_discrete": {
+          "mean_probes": 3.0,
+          "accuracy": 0.54,
+          "log_score": -0.9184843142622415,
+          "relative_recall_gain": 0.4163123558140045,
+          "graze_strength": 0.0064948074287722105,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "first_discrete": {
+          "mean_probes": 3.0,
+          "accuracy": 0.5057142857142857,
+          "log_score": -0.976533812662887,
+          "relative_recall_gain": 0.36616804097768707,
+          "graze_strength": 0.006414294093510087,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "cue_only": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3628571428571429,
+          "log_score": -1.0986122886681096,
+          "relative_recall_gain": 0.29283920989871304,
+          "graze_strength": 0.005841190708580935,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        }
+      },
+      "style_gap": 3.0,
+      "memory_swap": {
+        "discover_foreign_memory": {
+          "mean_probes": 3.0,
+          "accuracy": 0.3,
+          "relative_recall_gain": -0.4263193039377311
+        },
+        "economical_foreign_memory": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3628571428571429,
+          "relative_recall_gain": -0.31824502326756
+        }
+      },
+      "policy_swap": {
+        "host_A_with_B_policy": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3628571428571429
+        },
+        "host_B_with_A_policy": {
+          "mean_probes": 3.0,
+          "accuracy": 0.5514285714285714
+        }
+      }
+    },
+    {
+      "seed": 903,
+      "retrieval": {
+        "discover": {
+          "mean_probes": 3.0,
+          "accuracy": 0.5371428571428571,
+          "log_score": -0.9320290715895838,
+          "relative_recall_gain": 0.45270017094320836,
+          "graze_strength": 0.007374625782890741,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "economical": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3514285714285714,
+          "log_score": -1.0986122886681096,
+          "relative_recall_gain": 0.2985072944962064,
+          "graze_strength": 0.006605282655410366,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "best_discrete": {
+          "mean_probes": 3.0,
+          "accuracy": 0.5657142857142857,
+          "log_score": -0.8977112064819324,
+          "relative_recall_gain": 0.4880599672391186,
+          "graze_strength": 0.007604855850564832,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "first_discrete": {
+          "mean_probes": 3.0,
+          "accuracy": 0.5,
+          "log_score": -0.9779698839879974,
+          "relative_recall_gain": 0.4193879573785385,
+          "graze_strength": 0.00740940364281286,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "cue_only": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3514285714285714,
+          "log_score": -1.0986122886681096,
+          "relative_recall_gain": 0.2985072944962064,
+          "graze_strength": 0.006605282655410366,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        }
+      },
+      "style_gap": 3.0,
+      "memory_swap": {
+        "discover_foreign_memory": {
+          "mean_probes": 3.0,
+          "accuracy": 0.3657142857142857,
+          "relative_recall_gain": -0.42967398089327724
+        },
+        "economical_foreign_memory": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3514285714285714,
+          "relative_recall_gain": -0.34798538633061527
+        }
+      },
+      "policy_swap": {
+        "host_A_with_B_policy": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3514285714285714
+        },
+        "host_B_with_A_policy": {
+          "mean_probes": 3.0,
+          "accuracy": 0.5371428571428571
+        }
+      }
+    },
+    {
+      "seed": 904,
+      "retrieval": {
+        "discover": {
+          "mean_probes": 3.0,
+          "accuracy": 0.5085714285714286,
+          "log_score": -0.9741955177245856,
+          "relative_recall_gain": 0.4352721953835649,
+          "graze_strength": 0.008082706371923662,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "economical": {
+          "mean_probes": 0.0,
+          "accuracy": 0.30857142857142855,
+          "log_score": -1.0986122886681096,
+          "relative_recall_gain": 0.31281323360194513,
+          "graze_strength": 0.007186693084849894,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "best_discrete": {
+          "mean_probes": 3.0,
+          "accuracy": 0.54,
+          "log_score": -0.9093608609492457,
+          "relative_recall_gain": 0.4681647972845939,
+          "graze_strength": 0.00831864795440754,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "first_discrete": {
+          "mean_probes": 3.0,
+          "accuracy": 0.5,
+          "log_score": -0.9986098773390011,
+          "relative_recall_gain": 0.40621691935862825,
+          "graze_strength": 0.0078157873673338,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "cue_only": {
+          "mean_probes": 0.0,
+          "accuracy": 0.30857142857142855,
+          "log_score": -1.0986122886681096,
+          "relative_recall_gain": 0.31281323360194513,
+          "graze_strength": 0.007186693084849894,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        }
+      },
+      "style_gap": 3.0,
+      "memory_swap": {
+        "discover_foreign_memory": {
+          "mean_probes": 3.0,
+          "accuracy": 0.2885714285714286,
+          "relative_recall_gain": -0.1601087486089301
+        },
+        "economical_foreign_memory": {
+          "mean_probes": 0.0,
+          "accuracy": 0.30857142857142855,
+          "relative_recall_gain": -0.13362275055686057
+        }
+      },
+      "policy_swap": {
+        "host_A_with_B_policy": {
+          "mean_probes": 0.0,
+          "accuracy": 0.30857142857142855
+        },
+        "host_B_with_A_policy": {
+          "mean_probes": 3.0,
+          "accuracy": 0.5085714285714286
+        }
+      }
+    },
+    {
+      "seed": 905,
+      "retrieval": {
+        "discover": {
+          "mean_probes": 3.0,
+          "accuracy": 0.5428571428571428,
+          "log_score": -0.9335846856579558,
+          "relative_recall_gain": 0.42713163547388466,
+          "graze_strength": 0.008240283775776501,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "economical": {
+          "mean_probes": 0.0,
+          "accuracy": 0.32857142857142857,
+          "log_score": -1.0986122886681096,
+          "relative_recall_gain": 0.3076030377323773,
+          "graze_strength": 0.007163333130790449,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "best_discrete": {
+          "mean_probes": 3.0,
+          "accuracy": 0.5828571428571429,
+          "log_score": -0.9046687445360856,
+          "relative_recall_gain": 0.4713131390513289,
+          "graze_strength": 0.008325780224311331,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "first_discrete": {
+          "mean_probes": 3.0,
+          "accuracy": 0.5028571428571429,
+          "log_score": -0.9622981504168295,
+          "relative_recall_gain": 0.4353662957972677,
+          "graze_strength": 0.00814395529946324,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "cue_only": {
+          "mean_probes": 0.0,
+          "accuracy": 0.32857142857142857,
+          "log_score": -1.0986122886681096,
+          "relative_recall_gain": 0.3076030377323773,
+          "graze_strength": 0.007163333130790449,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        }
+      },
+      "style_gap": 3.0,
+      "memory_swap": {
+        "discover_foreign_memory": {
+          "mean_probes": 3.0,
+          "accuracy": 0.25142857142857145,
+          "relative_recall_gain": -0.2766002140814168
+        },
+        "economical_foreign_memory": {
+          "mean_probes": 0.0,
+          "accuracy": 0.32857142857142857,
+          "relative_recall_gain": -0.18434229473647945
+        }
+      },
+      "policy_swap": {
+        "host_A_with_B_policy": {
+          "mean_probes": 0.0,
+          "accuracy": 0.32857142857142857
+        },
+        "host_B_with_A_policy": {
+          "mean_probes": 3.0,
+          "accuracy": 0.5428571428571428
+        }
+      }
+    },
+    {
+      "seed": 906,
+      "retrieval": {
+        "discover": {
+          "mean_probes": 3.0,
+          "accuracy": 0.5371428571428571,
+          "log_score": -0.9407892981303233,
+          "relative_recall_gain": 0.4690870164307459,
+          "graze_strength": 0.00783791086269728,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "economical": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3457142857142857,
+          "log_score": -1.0986122886681096,
+          "relative_recall_gain": 0.3412343871739465,
+          "graze_strength": 0.006971049590255919,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "best_discrete": {
+          "mean_probes": 3.0,
+          "accuracy": 0.5142857142857142,
+          "log_score": -0.9433308025996563,
+          "relative_recall_gain": 0.45659469812694664,
+          "graze_strength": 0.007923537014667421,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "first_discrete": {
+          "mean_probes": 3.0,
+          "accuracy": 0.44571428571428573,
+          "log_score": -1.0517904358278338,
+          "relative_recall_gain": 0.39199700575634844,
+          "graze_strength": 0.007317619109148401,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "cue_only": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3457142857142857,
+          "log_score": -1.0986122886681096,
+          "relative_recall_gain": 0.3412343871739465,
+          "graze_strength": 0.006971049590255919,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        }
+      },
+      "style_gap": 3.0,
+      "memory_swap": {
+        "discover_foreign_memory": {
+          "mean_probes": 3.0,
+          "accuracy": 0.37142857142857144,
+          "relative_recall_gain": -0.5082232699205051
+        },
+        "economical_foreign_memory": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3457142857142857,
+          "relative_recall_gain": -0.46198917491858893
+        }
+      },
+      "policy_swap": {
+        "host_A_with_B_policy": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3457142857142857
+        },
+        "host_B_with_A_policy": {
+          "mean_probes": 3.0,
+          "accuracy": 0.5371428571428571
+        }
+      }
+    },
+    {
+      "seed": 907,
+      "retrieval": {
+        "discover": {
+          "mean_probes": 3.0,
+          "accuracy": 0.48,
+          "log_score": -0.9729301946655197,
+          "relative_recall_gain": 0.30534889925263076,
+          "graze_strength": 0.006356001024788351,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "economical": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3514285714285714,
+          "log_score": -1.0986122886681096,
+          "relative_recall_gain": 0.2525543056487961,
+          "graze_strength": 0.005516952714465942,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "best_discrete": {
+          "mean_probes": 3.0,
+          "accuracy": 0.48,
+          "log_score": -0.970642728366411,
+          "relative_recall_gain": 0.32413402933768476,
+          "graze_strength": 0.0064743186324182946,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "first_discrete": {
+          "mean_probes": 3.0,
+          "accuracy": 0.4657142857142857,
+          "log_score": -1.0177240763417355,
+          "relative_recall_gain": 0.2739150749176018,
+          "graze_strength": 0.00624332132057344,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "cue_only": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3514285714285714,
+          "log_score": -1.0986122886681096,
+          "relative_recall_gain": 0.2525543056487961,
+          "graze_strength": 0.005516952714465942,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        }
+      },
+      "style_gap": 3.0,
+      "memory_swap": {
+        "discover_foreign_memory": {
+          "mean_probes": 3.0,
+          "accuracy": 0.32,
+          "relative_recall_gain": -0.449419481209574
+        },
+        "economical_foreign_memory": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3514285714285714,
+          "relative_recall_gain": -0.3802290874873935
+        }
+      },
+      "policy_swap": {
+        "host_A_with_B_policy": {
+          "mean_probes": 0.0,
+          "accuracy": 0.3514285714285714
+        },
+        "host_B_with_A_policy": {
+          "mean_probes": 3.0,
+          "accuracy": 0.48
+        }
+      }
+    },
+    {
+      "seed": 908,
+      "retrieval": {
+        "discover": {
+          "mean_probes": 3.0,
+          "accuracy": 0.4714285714285714,
+          "log_score": -1.0103209212048916,
+          "relative_recall_gain": 0.36580643707162297,
+          "graze_strength": 0.00660166315464652,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "economical": {
+          "mean_probes": 0.0,
+          "accuracy": 0.35428571428571426,
+          "log_score": -1.0986122886681096,
+          "relative_recall_gain": 0.27074274044075064,
+          "graze_strength": 0.006050585640996632,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "best_discrete": {
+          "mean_probes": 3.0,
+          "accuracy": 0.5285714285714286,
+          "log_score": -0.9709394707099195,
+          "relative_recall_gain": 0.3762261177961641,
+          "graze_strength": 0.006756127754364781,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "first_discrete": {
+          "mean_probes": 3.0,
+          "accuracy": 0.46285714285714286,
+          "log_score": -1.0473058425814799,
+          "relative_recall_gain": 0.30765364677742935,
+          "graze_strength": 0.006454965062622878,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        },
+        "cue_only": {
+          "mean_probes": 0.0,
+          "accuracy": 0.35428571428571426,
+          "log_score": -1.0986122886681096,
+          "relative_recall_gain": 0.27074274044075064,
+          "graze_strength": 0.006050585640996632,
+          "steps": 350,
+          "autonomous_updates": 350,
+          "resets": 0
+        }
+      },
+      "style_gap": 3.0,
+      "memory_swap": {
+        "discover_foreign_memory": {
+          "mean_probes": 3.0,
+          "accuracy": 0.3514285714285714,
+          "relative_recall_gain": -0.4049880181440255
+        },
+        "economical_foreign_memory": {
+          "mean_probes": 0.0,
+          "accuracy": 0.35428571428571426,
+          "relative_recall_gain": -0.3241909663588327
+        }
+      },
+      "policy_swap": {
+        "host_A_with_B_policy": {
+          "mean_probes": 0.0,
+          "accuracy": 0.35428571428571426
+        },
+        "host_B_with_A_policy": {
+          "mean_probes": 3.0,
+          "accuracy": 0.4714285714285714
+        }
+      }
+    }
+  ]
+}
