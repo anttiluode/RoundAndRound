@@ -133,3 +133,35 @@ python mixture_followup.py --confirm --output results/mixture_confirm.json
 - Compare ordinary cyclic rotation, linear reservoirs, GRU/SSM and explicit episodic memory. No Möbius-specific advantage is assumed.
 
 **Research status:** Gates 1–3 are now in this repository. The next unsolved experiment is context discovery and controlled memory allocation when slots are full, with strong matched controls.
+
+
+## Gate 5 — The Changing Lens: memory grazes a continuing present
+
+**October 29, 2026.** [Learned lens and continuing state](changing_lens.py) · [reproducible A/B attention benchmark](changing_lens_benchmark.py) · [protocol and limitations](docs/CHANGING_LENS_GATE.md) · [full interpretation](results/CHANGING_LENS_RESULTS.md) · [seedwise replication receipts](results/changing_lens_confirm_summary.json).
+
+The previous four gates erased fast activity before reawakening old learned operators. This gate instead keeps **one current state running continuously**, including autonomous phase rotation and damping during gaps with no input. A partially observed cue is interpreted through a Bayesian mixture of three previously learned slow operators. Each memory's influence on the present is explicitly limited: it is a **graze, not a replacement**.
+
+A small **18-scalar REINFORCE policy** learns which of six limited one-dimensional attention channels to sample, or when to stop. Two policies start with the **same memory bank** and experience a similar stream, but deliberately receive **different observation costs** during training (0.02 vs 0.70). They can be swapped independently of the memories. All retrievals leave the slow memories unchanged; false reconsolidation is avoided by forbidding writes, not by solving evidence provenance.
+
+Eight-world replication on seeds 1001–1008 (after development 901–908, with the replication seeds reused after a later autonomous-time correction):
+
+| Memory reader | Average observations | Correct memory selected | Present-state error reduction vs no-memory influence |
+|---|---:|---:|---:|
+| Learned inquisitive policy | 3.0 | **51.39%** | 42.06% |
+| Learned economical policy | 0.0 | 35.11% | 33.71% |
+| **Analytic best-discrete Bayesian reader** | 3.0 | **55.39%** | **45.69%** |
+| Fixed first-three attention channels | 3.0 | 49.96% | 40.59% |
+| Uniform mixture / no measurement | 0.0 | 35.11% | 33.71% |
+
+**Interpretation:** Learned retrieval habits can vary while memory contents are fixed, and swapping the stored bank makes predictions worse. This is a simple engineered reward trade-off, **not emergent personality**; the stronger classical information-maximizing reader still wins. The system's ongoing recurrent state is never reset and its memory feedback changes the state by <1% on average. No general continual-learning, consciousness or hippocampal claim is made. The current policies collapse to all-or-none probe use rather than sophisticated conditional searching.
+
+Run locally with NumPy:
+
+```bash
+python -m unittest discover -s tests -v
+python changing_lens_benchmark.py --output results/changing_lens_development.json
+python changing_lens_benchmark.py --confirm --output results/changing_lens_confirm.json
+```
+
+**Next discriminator:** same reward for both policies, different life histories; measure learned conditional attention and transfer to genuinely new memory families at matched probe and computation costs. Only after that allow explicitly trusted, provenance-checked reconsolidation.
+
