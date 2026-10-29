@@ -161,8 +161,11 @@ def run(p:Protocol=Protocol())->dict:
 def main():
     a=argparse.ArgumentParser()
     a.add_argument('--output',default='results/structural_v1.json')
+    a.add_argument('--seeds',default='301,302,303,304,305,306,307,308',help='Comma-separated integer seeds; independent confirmation: 501,...,508')
     args=a.parse_args()
-    outcome=run()
+    seeds=tuple(int(x) for x in args.seeds.split(',') if x.strip())
+    if len(seeds)<2:raise ValueError('Need at least two seeds to estimate variability')
+    outcome=run(replace(Protocol(),seeds=seeds))
     dest=Path(args.output);dest.parent.mkdir(parents=True,exist_ok=True)
     dest.write_text(json.dumps(outcome,indent=2)+'\n')
     print(json.dumps({'gates':outcome['gates'],
