@@ -65,6 +65,34 @@ The benchmark writes every seed and intermediate checkpoint, including the nonca
 
 **Next scientific direction:** after this negative result, move beyond linearly invertible residue coordinates. Test *learned operator/transition memory* that changes how a neutral later probe travels after the fast loop is erased; keep direct-state and time-scale-matched controls. The open question is structural consolidation and active reactivation, not more memory filtering.
 
+## Gate 3 — structural memories that learn and coexist
+
+**October 29, 2026.** This follows the negative Gate 2: instead of remembering the fast vector, a slow memory learns how earlier activity changes a **response operator**. Each short five-step ringdown is encoded as Sihti-style successive differences; an online local update learns a context-specific perturbation of a stable autonomous rotation. The transient loop is discarded. After independently learning A, B, C, a fresh neutral probe starts from the **same initial fast state** in every condition, and the stored slow operator determines the response.
+
+**Implemented:** [three-slot learned operator bank](structural_memory.py) · [A→B→C benchmark, collisions, full-bank and noisy-cue attacks](structural_benchmark.py) · [five unit tests](tests/test_structural_memory.py) · [fixed local protocol](docs/STRUCTURAL_GATE.md) · [full result interpretation](results/STRUCTURAL_RESULTS.md) · [compact independent confirmation receipts](results/structural_confirm_summary.json).
+
+An independent eight-seed confirmation (501–508; development 301–308) reports **operator-specific response gain** = 1 − (model trajectory squared error)/(no-memory baseline squared error), on 64 *new probe directions* per regime. It is *not* classification accuracy.
+
+| After learning A, B, C | Old A gain ↑ | Old B gain ↑ | New C gain ↑ |
+|---|---:|---:|---:|
+| **Context-gated learned operators (219 scalar storage)** | **0.9971** | **0.9968** | **0.9977** |
+| **Matched direct-transition gated memory (219 scalars)** | **0.9971** | **0.9968** | **0.9977** |
+| Privileged true-label independent operators | 0.9971 | 0.9968 | 0.9977 |
+| One overwritable shared operator | −1.0954 | −1.2116 | 0.9977 |
+| Recent transition FIFO (216 scalar storage) | 0.0048 | 0.0077 | 0.5626 |
+
+**Bounded coexistence gate PASS:** A and B are retained as independently learned response dynamics while C is acquired, no old fast activity or original training traces are stored, and A's operator has **zero drift** during later writes. **Residue-specific gain FAIL:** an ordinary *equally budgeted context-gated direct transition learner* produces the same operator matrices within 5×10⁻¹⁷. The benefit comes from **separate writing and learned contextual routing**, not from a novel Sihti learning rule.
+
+**Failure modes are essential:** nearly colliding A/B contexts yield old A gain **−1.1094**; an unrecognized fourth task D gets gain ≈0 when the three slots are full because it is deliberately refused; on substantially noisier *test* context cues (SD 0.38 versus training 0.12), routing accuracy falls to **52.93%**. The separate context clusters are designed by the experimenter, not discovered autonomously. This is **not yet open-ended continual learning, hippocampal biology, a self-model or general visual memory**.
+
+Run:
+```bash
+python -m unittest discover -s tests -v
+python structural_benchmark.py --seeds 501,502,503,504,505,506,507,508 --output results/structural_confirm.json
+```
+
+**Next gate:** learning context boundaries (split/merge), replacing full operators without unacceptable forgetting, and avoiding contamination by self-generated replay. Keep the direct routed learner as the decisive comparison.
+
 ## What would earn a genuine advantage?
 
 - A storage budget that is smaller than a direct state/key-value store, charged honestly for *every* slow weight.
@@ -74,4 +102,4 @@ The benchmark writes every seed and intermediate checkpoint, including the nonca
 - Separate self-generated replays from *new evidence* before allowing them to rewrite slow memory (see SighImageSuper's self-query contamination controls).
 - Compare ordinary cyclic rotation, linear reservoirs, GRU/SSM and explicit episodic memory. No Möbius-specific advantage is assumed.
 
-**Next pre-registered gate to build:** online band-specific consolidation under a fixed scalar budget and a distribution shift. Require a real improvement over equal-parameter direct state memory, and report how performance changes when old cues are displaced by newly learned cues.
+**Research status:** Gates 1–3 are now in this repository. The next unsolved experiment is context discovery and controlled memory allocation when slots are full, with strong matched controls.
