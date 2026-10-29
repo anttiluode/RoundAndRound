@@ -93,6 +93,36 @@ python structural_benchmark.py --seeds 501,502,503,504,505,506,507,508 --output 
 
 **Next gate:** learning context boundaries (split/merge), replacing full operators without unacceptable forgetting, and avoiding contamination by self-generated replay. Keep the direct routed learner as the decisive comparison.
 
+## Gate 4 — which old loop should the present reawaken?
+
+**Confirmed mechanism and limits (October 29, 2026).** [Implementation](active_reentry.py) · [two-probe benchmark](active_reentry_benchmark.py) · [locally frozen protocol](docs/ACTIVE_REENTRY_GATE.md) · [seedwise results / failed write-control](results/ACTIVE_REENTRY_RESULTS.md).
+
+Three 8D learned dynamical operators receive **identical context cues**. They are allocated online based on observed short transitions rather than experimenter-supplied labels; the memory stores 219 scalars. With all fast state erased, the system must select a memory from just **two one-dimensional external response measurements**. A hand-coded information-gain probe policy changes the second probe according to the first answer. Independent eight-world confirmation (701–708):
+
+| Policy | Correct hidden memory selected | Operator-specific trajectory gain |
+|---|---:|---:|
+| Context cue only, no measurements | 33.3% | −0.579 |
+| Two random probes | 54.6% | 0.005 |
+| Two *optimized fixed* probes | 72.3% | 0.403 |
+| **Two posterior-adaptive probes** | **77.3%** | **0.503** |
+
+The adaptive policy beats optimized fixed by **5.03 percentage points**, but the full Gate-4 success criteria **FAIL**: hard-selected trajectory gain falls short of 0.80, and naive reconsolidation from noisy retrieval makes an almost-correct memory worse (**0.9917 → 0.9678**). Internal replay is explicitly prohibited from writing, and the matched direct-transition memory learns exactly the same operators. **These probing actions measure an external unknown system. Merely running stored loops without new evidence cannot identify an otherwise indistinguishable hidden regime.** The policy itself is engineered, not learned.
+
+### Follow-up — a present made from several candidate loops
+
+After observing that forced hard selection caused large errors, we tested posterior-weighted **parallel trajectory** retrieval, using the same 219 stored scalars and two external probe measurements but three internal rollouts. This is a conventional Bayesian mixture-of-experts readout applied to learned dynamical memories. [Code](mixture_followup.py) · [follow-up protocol](docs/MIXTURE_FOLLOWUP.md) · [fresh split results](results/mixture_confirm.json).
+
+**Independent follow-up seeds 801–808:** hard adaptive gain **0.706**, soft posterior mixture **0.804**, optimal fixed-probe soft mixture **0.712**, and cue-only prior mixture **0.288**. Soft beats hard in 7/8 worlds. This passes the narrower locally frozen follow-up criteria but **does not retroactively rescue the failed original Gate-4 gate**. Parallel trajectories increase computation, not stored parameter count. The experiment is synthetic linear active identification, not emergence of consciousness or open-ended continual intelligence.
+
+Run:
+```bash
+python -m unittest discover -s tests -v
+python active_reentry_benchmark.py --confirm --output results/active_reentry_confirm.json
+python mixture_followup.py --confirm --output results/mixture_confirm.json
+```
+
+[Next falsifiable experiment](docs/NEXT_EXPERIMENT.md): learn the policy for choosing probes from experience, compare with the engineered information-gain oracle, detect previously unseen operators, and prevent internally generated replay from contaminating slow structural memory.
+
 ## What would earn a genuine advantage?
 
 - A storage budget that is smaller than a direct state/key-value store, charged honestly for *every* slow weight.
